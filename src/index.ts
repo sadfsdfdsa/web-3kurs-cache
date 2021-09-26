@@ -4,7 +4,7 @@ import {scrap, process, Subject} from "./scraper";
 const cors = require('cors')
 const compression = require('compression');
 const app = express()
-const port = 5000
+const port = process.env.PORT || 5000
 
 app.use(cors({
     origin: '*'
