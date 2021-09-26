@@ -1,5 +1,5 @@
 import express from 'express'
-import {scrap, process, Subject} from "./scraper";
+import {scrap, process as htmlProcess, Subject} from "./scraper";
 
 const cors = require('cors')
 const compression = require('compression');
@@ -29,7 +29,7 @@ app.get('/update', async (_, res) => {
 const updateScrap = async () => {
     const scrapTmp = await scrap()
     data = scrapTmp.data || ''
-    parsedData = process((data))
+    parsedData = htmlProcess((data))
 }
 
 app.listen(port, async () =>{
