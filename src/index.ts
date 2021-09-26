@@ -33,7 +33,7 @@ const updateScrap = async () => {
 }
 
 app.listen(port, async () =>{
-    await updateScrap()
+    updateScrap()
     interval = setInterval(updateScrap, timeout)
 
     console.log(`Running on port ${port}`)
