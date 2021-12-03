@@ -6,13 +6,9 @@
   "scripts": {
     "build": "tsc",
     "start": "node dist/index.js",
-    "postinstall": "tsc",
     "dev": "tsc -w & nodemon .",
     "deploy": "git add . && git commit -m Heroku && git push heroku HEAD:master",
     "log": "heroku logs --tail"
-  },
-  "engines": {
-    "node": "14.17.3"
   },
   "dependencies": {
     "axios": "^0.21.4",

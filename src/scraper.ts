@@ -1,14 +1,12 @@
 const axios = require('axios')
-const jsdom = require("jsdom");
-const { JSDOM } = jsdom;
+const jsdom = require("jsdom")
+const { JSDOM } = jsdom
 
 const baseUrl = 'http://kdenisb.org/'
-
 type Link = {
     href: string
     label: string
 }
-
 export type Subject = {
     title: string
     links: Array<Link>
